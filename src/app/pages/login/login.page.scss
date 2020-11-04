@@ -10,6 +10,14 @@ ion-toolbar{
         --color: white;
     }
 }
+
+.ion-padding{
+    --padding-top: 20px;
+    --padding-end: 20px;
+    --padding-bottom: 20px;
+    --padding-start: 20px;
+}
+
 .login-logo {
         text-align: center;
         margin: auto;
@@ -30,12 +38,10 @@ ion-toolbar{
         }
     }
     .frgTag{
-            text-align: right;
-            color:var(--ion-color-primary);
-    }
-    .btn_class{
-        color: white ;
-        height: 50px;
+        font-size: 14px;
+        margin: 5px 0 0;
+        text-align: right;
+        color:var(--ion-color-primary);
     }
     .login-logo img {
          max-width: 150px;
@@ -48,18 +54,16 @@ ion-toolbar{
         margin: 0px;
     }
     ion-item{
-         --ion-background-color:#f3f3f3;
-        border-radius: 5px !important;
-        margin-top: 10px;
-        
+        &:not(:first-child){
+            margin-top: 10px;
+        }
     }
   
    .createAcc{
+       margin: 15px 0 0;
         text-align: center; 
        .registerTag{
             color: var(--ion-color-primary);
-      
-            font-weight: bold;
        }
    } 
 .btns{
@@ -81,4 +85,69 @@ ion-toolbar{
         margin: 0px 10px;
         opacity: .5;
     }
-}   
+}
+
+.login-buttons{
+    .button{
+        margin: 0;
+        font-size: 16px;
+        --padding-end: 10px;
+        --padding-start: 10px;
+        &:not(:first-child){
+            margin-top: 10px;
+        }
+    }
+    .facebook{
+        --color: #fff;
+        --border-width: 0;
+        --background: #0F52A1;
+    }
+    .google{
+        --color: #676767;
+        --border-width: 1px;
+        --border-style: solid;
+        --border-color: #676767;
+        --background: transparent;
+    }
+    .icon{
+        margin-right: 10px;
+        img{
+            display: block;
+            max-width: 100%;
+        }
+    }
+}
+
+.login-separator{
+    display: block;
+    margin: 25px 0;
+    font-size: 14px;
+    color: #676767;
+    line-height: 1.2;
+    overflow: hidden;
+    text-align: center;
+    span{
+        padding: 0 15px;
+        position: relative;
+        vertical-align: top;
+        display: inline-block;
+        &:after, &:before{
+            top: 50%;
+            content: '';
+            width: 50vw;
+            position: absolute;
+            border-top: 1px solid #D8D3D3;
+        }
+        &:after{
+            left: 100%;
+        }
+        &:before{
+            right: 100%;
+        }
+    }
+}
+
+.form-inputs{
+    padding: 0;
+    margin-bottom: 30px;
+}

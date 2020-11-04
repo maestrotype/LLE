@@ -24,12 +24,14 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
-@font-face {
-  font-family: mont;
-  src: url(assets/fonts/mont.ttf);
-}
+
+@import "styles/variables";
+@import "styles/fonts";
+@import "styles/header";
+@import "styles/page-head";
+
 *{
-    font-family: mont;
+  font-family: $BrText;
 }
 
 ion-modal.modalContact {
@@ -65,4 +67,29 @@ ion-modal.custom_modal2 {
   }
   --height: 70vh;
   align-items: flex-end;
+}
+
+.button{
+  height: 45px;
+  font-size: 18px;
+  line-height: 1.2;
+  box-shadow: none;
+  --box-shadow: none;
+  font-weight: normal;
+}
+
+.item-input{
+  --background: #fff;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px !important;
+}
+
+ion-input{
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: normal;
+  --color: #676767;
+  --background: #fff;
+  --padding-end: 15px;
+  --padding-start: 15px;
 }
