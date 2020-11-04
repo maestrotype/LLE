@@ -88,32 +88,10 @@ ion-toolbar{
 }
 
 .login-buttons{
-    .button{
-        margin: 0;
-        font-size: 16px;
-        --padding-end: 10px;
-        --padding-start: 10px;
+    .button-native {
+        margin-top: 10px;
         &:not(:first-child){
             margin-top: 10px;
-        }
-    }
-    .facebook{
-        --color: #fff;
-        --border-width: 0;
-        --background: #0F52A1;
-    }
-    .google{
-        --color: #676767;
-        --border-width: 1px;
-        --border-style: solid;
-        --border-color: #676767;
-        --background: transparent;
-    }
-    .icon{
-        margin-right: 10px;
-        img{
-            display: block;
-            max-width: 100%;
         }
     }
 }

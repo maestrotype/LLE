@@ -1,0 +1,21 @@
+
+.button {
+  margin-top: 10px;
+  font-size: 16px;
+  --padding-end: 10px;
+  --padding-start: 10px;
+}
+.google {
+  --color: #676767;
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: #676767;
+  --background: transparent;
+}
+.icon {
+  margin-right: 10px;
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}

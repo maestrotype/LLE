@@ -10,8 +10,12 @@ import { PopoverComponent } from '../components/popover/popover.component';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { SharedModule } from '../directives/shared.module';
+import { FbBtnComponent } from './fb-btn/fb-btn.component';
+import { EmailBtnComponent } from './email-btn/email-btn.component';
 const components = [
     PopoverComponent,
+    FbBtnComponent,
+    EmailBtnComponent,
     MenuComponent
 ];
 @NgModule({
