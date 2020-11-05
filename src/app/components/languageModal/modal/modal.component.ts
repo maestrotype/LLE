@@ -25,8 +25,8 @@ export class LanguageModal {
         return localStorage.getItem('language');
     }
 
-    changeLanguage(language) {
-        localStorage.setItem('language', language);
-        this.translate.use(language);
+    changeLanguage(e) {
+        localStorage.setItem('language', e.detail.value);
+        this.translate.use(e.detail.value);
     }
 }
