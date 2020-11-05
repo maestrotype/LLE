@@ -17,6 +17,17 @@ export class LoginPage implements OnInit {
   login: login = { email: '', password: '' };
   submitted = false;
   isLogin: boolean = false;
+  showPassword: boolean = false;
+  passwordType: string = 'password';
+  passwordIcon: string = 'eye-outline';
+
+  hideShowPassword() {
+    this.showPassword = !this.showPassword;
+    console.log(this.showPassword)
+    this.passwordType = this.showPassword ? 'text' : 'password';
+    this.passwordIcon = this.showPassword ? 'eye-off-outline' : 'eye-outline';
+  }
+
   constructor(
     private router: Router,
     private api: ApisService,

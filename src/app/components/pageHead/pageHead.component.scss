@@ -1,0 +1,18 @@
+@import "../../../styles/variables";
+
+.page-head-panel{
+  display: flex;
+  min-height: 50px;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  background: #F5F5F5;
+  justify-content: center;
+  &__title{
+      display: block;
+      font-size: 18px;
+      line-height: 1.2;
+      font-family: $BrGrot;
+      text-transform: uppercase;
+  }
+}

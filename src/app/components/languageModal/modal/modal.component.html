@@ -1,0 +1,18 @@
+<ion-toolbar (click)='dismiss()' class="modal-head">
+    <ion-icon name="chevron-down-outline"></ion-icon>
+</ion-toolbar>
+<ion-content>
+    <ion-list>
+        <ion-radio-group [value]="language" (ionSelect)="changeLanguage">
+            <ion-item class="radio-item">
+                <ion-label>English</ion-label>
+                <ion-radio slot="start" value="en"></ion-radio>
+            </ion-item>
+
+            <ion-item class="radio-item">
+                <ion-label>Spanish</ion-label>
+                <ion-radio slot="start" value="spanish"></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+    </ion-list>
+</ion-content>

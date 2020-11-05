@@ -1,22 +1,9 @@
-<ion-toolbar class="header" color="primary">
-  <ion-buttons>
-    <ion-button>
-      <ion-icon slot="icon-only" src="assets/icon/woldwide.svg"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-  <ion-buttons slot="end">
-    <ion-title class="logo">LLE</ion-title>
-  </ion-buttons>
-</ion-toolbar>
+<app-header></app-header>
+<app-page-head title="{{'Log In' | translate}}"></app-page-head>
 
 <ion-content class="ion-padding">
-
-  <div class="page-head-panel">
-    <strong class="page-head-panel__title">{{'Log In' | translate}}</strong>
-  </div>
-
   <div class="login-buttons">
-    <app-fb-btn></app-fb-btn>  
+    <app-fb-btn></app-fb-btn>
     <app-email-btn></app-email-btn>
   </div>
 
@@ -25,7 +12,7 @@
   <form #loginForm="ngForm" novalidate>
     <ion-list lines="none" class="form-inputs">
       <ion-item lines="none">
-        <ion-input [(ngModel)]="login.email" type="email" [placeholder]="('Email' | translate) || '&nbsp;'" name="email"
+        <ion-input [(ngModel)]="login.email" type="email" [placeholder]="('Email address' | translate) || '&nbsp;'" name="email"
           #email="ngModel" spellcheck="false" autocapitalize="off" required>
         </ion-input>
       </ion-item>
@@ -35,10 +22,13 @@
         </p>
       </ion-text>
 
-      <ion-item lines="none">
+      <ion-item lines="none" class="password">
         <ion-input [(ngModel)]="login.password" name="password" [placeholder]="('password' | translate) || '&nbsp;'"
-          type="password" #password="ngModel" required>
+          [type]="passwordType" #password="ngModel" required>
         </ion-input>
+        <ion-button class="eye-icon" clear item-end (click)='hideShowPassword()'>
+          <ion-icon [name]="passwordIcon"></ion-icon>
+        </ion-button>
       </ion-item>
 
       <ion-text color="danger">
@@ -51,7 +41,7 @@
 
     <ion-row class="ion-no-margin ion-no-padding">
       <ion-col class="ion-no-margin ion-no-padding">
-        <ion-button class="btn_class" (click)="onLogin(loginForm)" type="submit" expand="block" [disabled]="isLogin">
+        <ion-button class="btn-submit" (click)="onLogin(loginForm)" type="submit" expand="block" [disabled]="isLogin">
           <span *ngIf="!isLogin"> {{'Log In' | translate}}</span>
           <ion-spinner name="circles" *ngIf="isLogin"></ion-spinner>
         </ion-button>
@@ -59,13 +49,8 @@
     </ion-row>
 
   </form>
+
   <p class="createAcc" (click)="register()">{{'Dont have an account?' | translate}}
     <span class="registerTag">{{'Sign up' | translate}}</span>
   </p>
-  <!-- <div class="btns">
-    <img src="assets/imgs/en.png" (click)="changeLng('en')"
-      [ngClass]="getClassName() == 'en' ? 'flagActive':'flagDeactive'" alt="">
-    <img src="assets/imgs/spanish.png" (click)="changeLng('spanish')"
-      [ngClass]="getClassName() == 'spanish' ? 'flagActive':'flagDeactive'" alt="">
-  </div> -->
 </ion-content>
