@@ -8,10 +8,12 @@ import { ForgotPageRoutingModule } from './forgot-routing.module';
 
 import { ForgotPage } from './forgot.page';
 import { SharedModule } from 'src/app/directives/shared.module';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    ComponentsModule,
     FormsModule,
     IonicModule,
     ForgotPageRoutingModule,

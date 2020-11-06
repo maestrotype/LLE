@@ -1,19 +1,13 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button mode="md"></ion-back-button>
-    </ion-buttons>
-    <ion-title>{{'Forgot Password?' | translate}}</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
+<app-page-head title="{{'Forgot Password?' | translate}}" [back]="true"></app-page-head>
 
 <ion-content class="ion-padding">
   <div class="login-logo">
-    <img src="assets/icon.png" class="logo_icon" alt="yoga">
+    <img src="assets/moped.svg" class="logo_icon" alt="">
   </div>
 
   <form #loginForm="ngForm" novalidate>
-    <ion-list lines="none">
+    <ion-list lines="none" class="form-inputs">
       <ion-item lines="none">
         <ion-input [(ngModel)]="login.email" [placeholder]="('Email' | translate) || '&nbsp;'" name="email"
           #email="ngModel" spellcheck="false" autocapitalize="off" required>
@@ -25,13 +19,14 @@
         </p>
       </ion-text>
 
-      <ion-row class="ion-no-margin ion-no-padding" style="margin-top: 20px;">
-        <ion-col class="ion-no-margin ion-no-padding">
-          <ion-button class="btn_class" (click)="onLogin(loginForm)" type="submit" expand="block">
-            {{'Send Link' | translate}}
-          </ion-button>
-        </ion-col>
-      </ion-row>
     </ion-list>
+
+    <ion-row class="ion-no-margin ion-no-padding" style="margin-top: 20px;">
+      <ion-col class="ion-no-margin ion-no-padding">
+        <ion-button class="btn_class" (click)="onLogin(loginForm)" type="submit" expand="block">
+          {{'Send Link' | translate}}
+        </ion-button>
+      </ion-col>
+    </ion-row>
   </form>
 </ion-content>
