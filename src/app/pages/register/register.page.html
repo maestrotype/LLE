@@ -71,7 +71,7 @@
 
     <ion-row class="ion-no-margin ion-no-padding">
       <ion-col class="ion-no-margin ion-no-padding">
-        <ion-button class="btn_class" (click)="onLogin(loginForm)" type="submit" expand="block" [disabled]="isLogin">
+        <ion-button class="btn-submit" (click)="onLogin(loginForm)" type="submit" expand="block" [disabled]="isLogin">
           <span *ngIf="!isLogin"> {{'Sign up' | translate}}</span>
           <ion-spinner name="circles" *ngIf="isLogin"></ion-spinner>
         </ion-button>
