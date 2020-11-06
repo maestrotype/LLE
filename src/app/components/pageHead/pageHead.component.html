@@ -1,3 +1,6 @@
 <div class="page-head-panel">
+  <ion-buttons class="back-btn" *ngIf="back" (click)="handleBack()">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </ion-buttons>
   <strong class="page-head-panel__title">{{title}}</strong>
 </div>
